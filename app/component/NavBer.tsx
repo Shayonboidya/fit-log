@@ -9,10 +9,7 @@ const NavBer = () => {
         { name: "Workouts", link: "/" },
         { name: "My Plan", link: "/my-plan" },
     ];
-    const navLinksButton = [
-        { name: "Plan", link: "/" },
-        { name: "Saved", link: "/" }
-    ]
+    const navLinksButton = NavLinksButton();
 
 
     return (
