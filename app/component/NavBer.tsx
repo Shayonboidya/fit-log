@@ -3,13 +3,14 @@ import Link from 'next/link';
 import React from 'react';
 import logo from '@/assets/logo.png';
 import Image from 'next/image';
+import { NavLinksButton } from './navLinksButton';
 
 const NavBer = () => {
     const navLinks = [
         { name: "Workouts", link: "/" },
         { name: "My Plan", link: "/my-plan" },
     ];
-    const navLinksButton = NavLinksButton();
+    
 
 
     return (
@@ -101,26 +102,8 @@ const NavBer = () => {
                 </div>
 
                 {/* Navbar End */}
-                <div className="navbar-end">
-
-                    {/* Desktop / Tablet Buttons */}
-                    <ul className="items-center gap-2 flex sm:gap-3">
-                        {navLinksButton.map((navlinkButton, index) => (
-                            <li key={navlinkButton.name}>
-                                <Link
-                                    href={navlinkButton.link}
-                                    className={`btn min-h-9 h-9 rounded-full px-3 text-xs font-bold transition-all duration-300 sm:px-4 sm:text-sm md:h-10 md:px-5 ${index === navLinksButton.length - 1
-                                        ? "border-none bg-green-500 text-white shadow-md shadow-green-500/20 hover:-translate-y-0.5 hover:bg-green-600 hover:shadow-lg"
-                                        : "btn-ghost hover:bg-green-50 hover:text-green-700"
-                                        }`}
-                                >
-                                    {navlinkButton.name}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-
-                </div>
+               <NavLinksButton></NavLinksButton>
+               
 
             </div>
         </header>

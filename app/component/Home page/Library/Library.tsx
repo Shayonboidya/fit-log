@@ -1,13 +1,13 @@
+import { IWork } from '@/app/Type';
 import React from 'react';
-import { CgLayoutGrid } from 'react-icons/cg';
 
 const getAllData = async()=>{
     const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
     return res.json();
 }
 const Library = async() => {
-    const exsersiceList = await getAllData();
-    console.log(exsersiceList);
+    const works:IWork[] = await getAllData();
+    // console.log(exsersiceList);
     return (
 
         <div className=" w-full px-4 sm:px-6 lg:px-8">
@@ -23,8 +23,10 @@ const Library = async() => {
                 <p className="max-w-lg text-sm  text-slate-400 sm:text-base">
                     Twelve lifts covering every major muscle group.
                 </p>
-
             </div>
+            
+
+
 
         </div>
 
