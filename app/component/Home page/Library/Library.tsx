@@ -1,12 +1,13 @@
 import { IWork } from '@/app/Type';
 import React from 'react';
+import WorkCardSmall from './WorkCardSmall';
 
-const getAllData = async()=>{
+const getAllData = async () => {
     const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
     return res.json();
 }
-const Library = async() => {
-    const works:IWork[] = await getAllData();
+const Library = async () => {
+    const works: IWork[] = await getAllData();
     // console.log(exsersiceList);
     return (
 
@@ -24,7 +25,19 @@ const Library = async() => {
                     Twelve lifts covering every major muscle group.
                 </p>
             </div>
-            
+
+
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4">
+                {works.map((work) => (
+                    <WorkCardSmall
+                        key={work.id}
+                        work={work}
+                    />
+                ))}
+            </div>
+
+
+
 
 
 
