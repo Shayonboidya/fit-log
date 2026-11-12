@@ -1,6 +1,13 @@
 import React from 'react';
+import { CgLayoutGrid } from 'react-icons/cg';
 
-const Library = () => {
+const getAllData = async()=>{
+    const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
+    return res.json();
+}
+const Library = async() => {
+    const exsersiceList = await getAllData();
+    console.log(exsersiceList);
     return (
 
         <div className=" w-full px-4 sm:px-6 lg:px-8">
