@@ -30,7 +30,7 @@ const Footer = () => {
                 {/* Copyright */}
                 <div className="text-center sm:text-right">
                     <p className="text-xs font-medium leading-relaxed text-gray-400 sm:text-sm">
-                        © {new Date().getFullYear()} <span className="font-semibold text-gray-300">FITLOG</span>
+                        © 2026 <span className="font-semibold text-gray-300">FITLOG</span>
                         {" "}All rights reserved. Workout Library. Train hard, log honest.
                     </p>
 

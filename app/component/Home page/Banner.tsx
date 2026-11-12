@@ -5,7 +5,7 @@ import bannerImg from '@/assets/banner.png';
 const Banner = () => {
     return (
 
-        <section className="relative w-full overflow-hidden bg-slate-950 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <section className="m-3 rounded-2xl bg-slate-800 px-4 py-8 shadow-2xl sm:m-5 sm:rounded-3xl sm:px-6 sm:py-12 md:m-6 md:px-8 lg:m-10 lg:px-10 lg:py-16 xl:px-12 xl:py-20">
 
             <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
 
@@ -49,7 +49,7 @@ const Banner = () => {
 
                     {/* Background Glow */}
 
-                    <div className="p-2 shadow-2xl sm:rounded-3xl sm:p-3">
+                    <div className="p-2 sm:p-3">
 
                         <Image
                             src={bannerImg}
