@@ -123,16 +123,6 @@ const NavBer = () => {
                         ))}
                     </ul>
 
-                    {/* Mobile Primary Button */}
-                    {/* {navLinksButton.length > 0 && (
-                        <Link
-                            href={navLinksButton[navLinksButton.length - 1].link}
-                            className="btn min-h-9 h-9 rounded-full border-none bg-green-500 px-3 text-xs font-bold text-white shadow-md shadow-green-500/20 transition-all duration-300 hover:bg-green-600 sm:hidden"
-                        >
-                            {navLinksButton[navLinksButton.length - 1].name}
-                        </Link>
-                    )} */}
-
                 </div>
 
             </div>
