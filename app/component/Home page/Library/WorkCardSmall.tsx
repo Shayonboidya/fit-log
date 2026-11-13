@@ -8,7 +8,7 @@ import { MdAccessTime } from 'react-icons/md';
 
 const WorkCardSmall = ({ work }: { work: IWork }) => {
     return (
-        <Link href={'/'}>
+        <Link href={`/excercise/${work.id}`}>
             <div className="group overflow-hidden rounded-2xl border border-slate-700/70 bg-slate-800 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-green-500/50 hover:shadow-xl hover:shadow-green-500/5">
 
                 {/* Workout Image */}
