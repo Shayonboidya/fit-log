@@ -14,7 +14,7 @@ const NavBer = () => {
 
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-base-300/70 bg-base-100/95 shadow-sm backdrop-blur-xl">
+        <header className="sticky top-0 z-50 w-full border-b border-base-300/70  shadow-sm backdrop-blur-xl">
 
             <div className="navbar mx-auto min-h-16 max-w-7xl px-3 sm:px-5 md:min-h-[76px] lg:px-8">
 
@@ -62,7 +62,7 @@ const NavBer = () => {
                         </ul>
                     </div>
 
-                    {/* Logo */}
+                    {/* Logo */} 
                     <Link
                         href="/"
                         className="flex shrink-0 items-center gap-1.5 sm:gap-2.5"
@@ -76,7 +76,7 @@ const NavBer = () => {
                             className="h-5 w-5 object-contain sm:h-9 sm:w-9"
                         />
 
-                        <span className="text-lg font-extrabold tracking-tight sm:text-2xl">
+                        <span className="text-lg font-extrabold tracking-tight text-white sm:text-2xl">
                             FIT<span className="text-green-500">LOG</span>
                         </span>
                     </Link>
@@ -91,7 +91,7 @@ const NavBer = () => {
                             <li key={navLink.name}>
                                 <Link
                                     href={navLink.link}
-                                    className="rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:bg-green-100 hover:text-green-700 xl:text-base"
+                                    className="rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 text-white hover:bg-green-100 hover:text-green-700 xl:text-base"
                                 >
                                     {navLink.name}
                                 </Link>

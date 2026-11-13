@@ -11,19 +11,20 @@ const Library = async () => {
     // console.log(exsersiceList);
     return (
 
-        <div className=" w-full px-4 sm:px-6 lg:px-8">
+        <div className=" w-full px-4 my-10 sm:px-6 lg:px-8">
 
-            <div className="mb-7 gap-2 border-b border-slate-700/70 pb-5 sm:mb-9 sm:gap-3">
+            <div className="mb-7 pb-5 sm:mb-9 sm:pb-6">
 
                 {/* Heading */}
-                <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                <h2 className="text-2xl font-extrabold text-left text-white sm:text-3xl md:text-4xl lg:text-5xl">
                     THE <span className="text-green-400">LIBRARY</span>
                 </h2>
 
                 {/* Description */}
-                <p className="max-w-lg text-sm  text-slate-400 sm:text-base">
+                <p className="max-w-lg text-xs  text-slate-400 sm:text-sm md:text-base">
                     Twelve lifts covering every major muscle group.
                 </p>
+
             </div>
 
 
