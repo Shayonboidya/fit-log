@@ -9,6 +9,7 @@ const NavBer = () => {
     const navLinks = [
         { name: "Workouts", link: "/" },
         { name: "My Plan", link: "/my-plan" },
+        { name: "Excercise", link: "/excercise" },
     ];
     
 
