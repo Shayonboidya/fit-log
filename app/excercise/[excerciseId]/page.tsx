@@ -1,4 +1,5 @@
 import WorkCardLarge from '@/app/component/WorkCardLarge';
+import ExerciseDetailsSkeleton from '@/app/skeliton/ExerciseDetailsSkeleton';
 import { IWork } from '@/app/Type';
 import React, { Suspense } from 'react';
 
@@ -20,7 +21,7 @@ const WorkPromice = async ({ params }: { params: Promise<{ excerciseId: string }
 const ExcerciseIdPage = async ({ params }: { params: Promise<{ excerciseId: string }> }) => {
 
     return (
-        <Suspense fallback={<p>loadding...</p>}>
+        <Suspense fallback={<ExerciseDetailsSkeleton></ExerciseDetailsSkeleton>}>
             <WorkPromice params={params}></WorkPromice>
         </Suspense>
     );
