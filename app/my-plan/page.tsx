@@ -1,4 +1,3 @@
-import React from 'react';
 import TodaysPlanBody from '../component/MyPlan/TodaysPlanCardBody';
 import SavedCardBody from '../component/MyPlan/SavedCardBody';
 
@@ -26,33 +25,58 @@ const MyPlanPage = () => {
             {/* children */}
 
             {/* Tabs and Sorting */}
-            {/* it will be left side */}
-            <select defaultValue="Pick a color" className="select">
-                <option disabled={true}>Sort By</option>
-                <option>Crimson</option>
-                <option>Amber</option>
-                <option>Velvet</option>
-            </select>
 
+            {/* Sort By */}
+            <div className="mb-5 flex w-full justify-end">
+                <select
+                    defaultValue="sort"
+                    className="select h-11 min-h-11 w-full max-w-xs rounded-xl border border-slate-700 bg-slate-900 px-4 text-sm font-semibold text-slate-300 shadow-lg outline-none transition-all hover:border-green-400/50 focus:border-green-400 focus:outline-none"
+                >
+                    <option value="sort" disabled>
+                        Sort By
+                    </option>
+                    <option value="Crimson">Crimson</option>
+                    <option value="Amber">Amber</option>
+                    <option value="Velvet">Velvet</option>
+                </select>
+            </div>
 
-            <div>
-                {/* name of each tab group should be unique */}
-                <div className="tabs tabs-lift">
-                    <input type="radio" name="my_tabs_3" className="tab" aria-label="Today&apos;s Plan" defaultChecked />
-                    <div className="tab-content bg-base-100 border-base-300 p-6">
+            {/* Tabs */}
+            {/* <div className="w-full min-w-0"> */}
+                <div className="tabs tabs-lift w-full">
+
+                    {/* Today's Plan */}
+                    <input
+                        type="radio"
+                        name="my_tabs_3"
+                        className="tab min-w-0 flex-1 whitespace-nowrap px-2 text-xs font-bold text-slate-400 transition-colors checked:text-green-400 sm:flex-none sm:px-7 sm:text-sm"
+                        aria-label="Today's Plan"
+                        defaultChecked
+                    />
+
+                    <div className="tab-content min-w-0 rounded-b-2xl rounded-tr-2xl border border-slate-700 bg-slate-900 p-3 shadow-xl sm:p-5 md:p-6">
 
                         <TodaysPlanBody />
 
                     </div>
 
-                    <input type="radio" name="my_tabs_3" className="tab" aria-label="Saved" />
-                    <div className="tab-content bg-base-100 border-base-300 p-6">
+                    {/* Saved */}
+                    <input
+                        type="radio"
+                        name="my_tabs_3"
+                        className="tab min-w-0 flex-1 whitespace-nowrap px-2 text-xs font-bold text-slate-400 transition-colors checked:text-green-400 sm:flex-none sm:px-7 sm:text-sm"
+                        aria-label="Saved"
+                    />
 
-                        <SavedCardBody></SavedCardBody>
+                    <div className="tab-content min-w-0 rounded-b-2xl rounded-tr-2xl border border-slate-700 bg-slate-900 p-3 shadow-xl sm:p-5 md:p-6">
+
+                        <SavedCardBody />
+
                     </div>
 
-                </div>
+                {/* </div> */}
             </div>
+
 
         </div>
 
