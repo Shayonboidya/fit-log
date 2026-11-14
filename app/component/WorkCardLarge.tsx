@@ -3,6 +3,7 @@ import { IWork } from '../Type';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CiCalendarDate, CiSaveDown2 } from 'react-icons/ci';
+import AddTodaysPlan from './Button/AddTodaysPlan';
 
 const WorkCardLarge = ({ work }: { work: IWork }) => {
     return (
@@ -109,12 +110,7 @@ const WorkCardLarge = ({ work }: { work: IWork }) => {
 
                     {/* Action Buttons */}
                     <div className="mt-auto grid grid-cols-1 gap-3 pt-5 sm:grid-cols-2">
-                        <Link href="/" className="w-full">
-                            <button className="btn h-12 w-full border-none bg-green-400 text-lg font-bold text-slate-950 shadow-lg shadow-green-400/10 transition-all hover:bg-green-300">
-                                <CiCalendarDate className="text-lg" />
-                                Add Today&apos;s Plan
-                            </button>
-                        </Link>
+                        <AddTodaysPlan work= {work}></AddTodaysPlan>
 
                         <Link href="/" className="w-full">
                             <button className="btn h-12 w-full border border-slate-600 bg-slate-800 text-lg font-bold text-white transition-all hover:border-green-400 hover:bg-slate-700">
