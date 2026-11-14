@@ -12,8 +12,8 @@ export const NavLinksButton = () => {
 
 
     const navLinksButton = [
-        { name: `Plan`, count: todaysPlans.length, link: "/" },
-        { name: `Saved`, count: saved.length, link: "/" }
+        { name: `Plan`, count: todaysPlans.length, link: "/my-plan" },
+        { name: `Saved`, count: saved.length, link: "/my-plan" }
     ]
 
     return (

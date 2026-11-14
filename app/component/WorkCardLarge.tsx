@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CiCalendarDate, CiSaveDown2 } from 'react-icons/ci';
 import AddTodaysPlan from './Button/AddTodaysPlan';
+import SaveForLatter from './Button/SaveForLatter';
 
 const WorkCardLarge = ({ work }: { work: IWork }) => {
     return (
@@ -112,12 +113,7 @@ const WorkCardLarge = ({ work }: { work: IWork }) => {
                     <div className="mt-auto grid grid-cols-1 gap-3 pt-5 sm:grid-cols-2">
                         <AddTodaysPlan work= {work}></AddTodaysPlan>
 
-                        <Link href="/" className="w-full">
-                            <button className="btn h-12 w-full border border-slate-600 bg-slate-800 text-lg font-bold text-white transition-all hover:border-green-400 hover:bg-slate-700">
-                                <CiSaveDown2 className="text-lg" />
-                                Save For Later
-                            </button>
-                        </Link>
+                        <SaveForLatter work={work}></SaveForLatter>
                     </div>
 
                 </div>
