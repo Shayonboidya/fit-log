@@ -1,8 +1,6 @@
 import React from 'react';
 import { IWork } from '../Type';
 import Image from 'next/image';
-import Link from 'next/link';
-import { CiCalendarDate, CiSaveDown2 } from 'react-icons/ci';
 import AddTodaysPlan from './Button/AddTodaysPlan';
 import SaveForLatter from './Button/SaveForLatter';
 

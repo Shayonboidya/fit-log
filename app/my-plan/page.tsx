@@ -1,5 +1,6 @@
-"use client"
 import React from 'react';
+import TodaysPlanBody from '../component/MyPlan/TodaysPlanCardBody';
+import SavedCardBody from '../component/MyPlan/SavedCardBody';
 
 const MyPlanPage = () => {
     return (
@@ -25,23 +26,29 @@ const MyPlanPage = () => {
             {/* children */}
 
             {/* Tabs and Sorting */}
+            {/* it will be left side */}
+            <select defaultValue="Pick a color" className="select">
+                <option disabled={true}>Sort By</option>
+                <option>Crimson</option>
+                <option>Amber</option>
+                <option>Velvet</option>
+            </select>
+
+
             <div>
                 {/* name of each tab group should be unique */}
                 <div className="tabs tabs-lift">
-                    <input type="radio" name="my_tabs_3" className="tab" aria-label="Today&apos;s Plan" />
+                    <input type="radio" name="my_tabs_3" className="tab" aria-label="Today&apos;s Plan" defaultChecked />
                     <div className="tab-content bg-base-100 border-base-300 p-6">
 
-                        Today&apos;s Plan
+                        <TodaysPlanBody />
 
                     </div>
 
-                    <input type="radio" name="my_tabs_3" className="tab" aria-label="Saved" defaultChecked />
+                    <input type="radio" name="my_tabs_3" className="tab" aria-label="Saved" />
                     <div className="tab-content bg-base-100 border-base-300 p-6">
 
-
-                        Saved
-
-
+                        <SavedCardBody></SavedCardBody>
                     </div>
 
                 </div>
