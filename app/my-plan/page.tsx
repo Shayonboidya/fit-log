@@ -56,7 +56,7 @@ const MyPlanPage = () => {
 
 
             {/* children */}
-            <ShowingData works={`${activeTab === "todays" ? todaysPlans : saved}`}></ShowingData>
+            <ShowingData activeTab={activeTab}  todaysPlans={todaysPlans} saved={saved}></ShowingData>
             {/* Tabs and Sorting */}
 
             {/* Sort By */}
@@ -64,7 +64,6 @@ const MyPlanPage = () => {
                 <select
                     defaultValue="sort"
                     className="select h-11 min-h-11 w-full max-w-xs rounded-xl border border-slate-700 bg-slate-900 px-4 text-sm font-semibold text-slate-300 shadow-lg outline-none transition-all hover:border-green-400/50 focus:border-green-400 focus:outline-none"
-
                     onChange={(e) => setSortBy(e.target.value as "Ratting" | "Minutes" | "Calories")}
                 >
                     <option value="sort" disabled>
@@ -87,8 +86,7 @@ const MyPlanPage = () => {
                     className="tab min-w-0 flex-1 whitespace-nowrap px-2 text-xs font-bold text-slate-400 transition-colors checked:text-green-400 sm:flex-none sm:px-7 sm:text-sm"
                     aria-label="Today's Plan"
                     checked={activeTab === "todays"}
-                    onClick={() => setActiveTab("todays")}
-                    defaultChecked
+                    onChange={() => setActiveTab("todays")}
                 />
 
                 <div className="tab-content min-w-0 rounded-b-2xl rounded-tr-2xl border border-slate-700 bg-slate-900 p-3 shadow-xl sm:p-5 md:p-6">
@@ -104,7 +102,7 @@ const MyPlanPage = () => {
                     className="tab min-w-0 flex-1 whitespace-nowrap px-2 text-xs font-bold text-slate-400 transition-colors checked:text-green-400 sm:flex-none sm:px-7 sm:text-sm"
                     aria-label="Saved"
                     checked={activeTab === "saved"}
-                    onClick={() => setActiveTab("saved")}
+                    onChange={() => setActiveTab("saved")}
                 />
 
                 <div className="tab-content min-w-0 rounded-b-2xl rounded-tr-2xl border border-slate-700 bg-slate-900 p-3 shadow-xl sm:p-5 md:p-6">
