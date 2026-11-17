@@ -35,7 +35,7 @@ const Banner = () => {
                     <div className="flex w-full flex-wrap items-center gap-3 sm:w-auto">
 
                         <Link
-                            href="/"
+                            href="#library"
                             className="btn min-h-12 flex-1 rounded-xl border-none bg-[#C2F800] px-6 text-sm font-bold text-black shadow-lg shadow-green-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-green-500/30 sm:flex-none sm:px-8"
                         >
                             BROWSE WORKOUTS

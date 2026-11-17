@@ -1,20 +1,17 @@
-"use client"
-import React, { useContext } from 'react';
 import SaveCard from './SaveCard';
 import { IWork } from '@/app/Type';
-import { WorksContext } from '@/Context/WorksProvider';
 import Link from 'next/link';
 
-const SavedCardBody = () => {
+const SavedCardBody = ({newSaveCard}:{newSaveCard:IWork[]}) => {
 
-    const { saved } = useContext(WorksContext) as { saved: IWork[] };
+    
 
-    const works: IWork[] = [...saved];
+    const works: IWork[] = [...newSaveCard];
     // console.log(saved);
     return (
         <div>
             {
-                saved.length > 0 ? (
+                works.length > 0 ? (
                      <div className="grid grid-cols-1 gap-4 md:gap-5">
                     {works.map((work: IWork) => (
                         <SaveCard

@@ -1,20 +1,17 @@
-"use client"
 import { IWork } from '@/app/Type';
-import { WorksContext } from '@/Context/WorksProvider';
-import React, { useContext } from 'react';
+
 import TodaysPlanCard from './TodaysPlanCard';
 import Link from 'next/link';
 
-const TodaysPlanBody = () => {
-    const { todaysPlans } = useContext(WorksContext) as { todaysPlans: IWork[] };
+const TodaysPlanBody = ({newTodaysPlan}:{newTodaysPlan:IWork[]}) => {
 
-    const works: IWork[] = [...todaysPlans];
+    const works: IWork[] = [...newTodaysPlan];
     // console.log(todaysPlans);
     return (
 
         <div className="w-full">
 
-            {todaysPlans.length > 0 ? (
+            {works.length > 0 ? (
 
                 /* Workout Cards */
                 <div className="grid grid-cols-1 gap-4 md:gap-5">

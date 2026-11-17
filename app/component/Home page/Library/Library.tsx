@@ -11,7 +11,7 @@ const Library = async () => {
     // console.log(exsersiceList);
     return (
 
-        <div className=" w-full px-4 my-10 sm:px-6 lg:px-8">
+        <div id='library' className=" w-full px-4 my-10 sm:px-6 lg:px-8">
 
             <div className="mb-7 pb-5 sm:mb-9 sm:pb-6">
 

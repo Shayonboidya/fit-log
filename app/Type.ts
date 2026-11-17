@@ -14,3 +14,8 @@ export interface IWork {
     instructions: string[];
 
 }
+
+export interface InavLinks {
+    name: string;
+    link: string;
+}

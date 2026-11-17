@@ -6,6 +6,7 @@ import { FaFire } from 'react-icons/fa';
 import { IoMdCheckmark } from 'react-icons/io';
 import { MdAccessTime } from 'react-icons/md';
 import DeletePlan from './delete/DeletePlan';
+import { toast } from 'react-toastify';
 
 const TodaysPlanCard = ({ work }: { work: IWork }) => {
     return (
@@ -72,6 +73,7 @@ const TodaysPlanCard = ({ work }: { work: IWork }) => {
 
                 {/* Mark as Done */}
                 <button
+                    onClick={() => toast.success("Mark as Done")}
                     className="btn h-10 min-h-10 flex-1 rounded-xl border-none bg-green-400 px-3 text-xs font-bold text-slate-950 hover:bg-green-300 sm:flex-none sm:px-4 sm:text-sm"
                 >
                     <IoMdCheckmark className="text-lg" />

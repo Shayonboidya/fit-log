@@ -4,6 +4,7 @@ import { IWork } from '@/app/Type';
 import { WorksContext } from '@/Context/WorksProvider';
 import React, { useContext } from 'react';
 import { FaXmark } from 'react-icons/fa6';
+import { toast } from 'react-toastify';
 
 const DeletePlan = ({ work }: { work: IWork }) => {
     const { todaysPlans, setTodaysPlans } = useContext(WorksContext) as {
@@ -18,6 +19,7 @@ const DeletePlan = ({ work }: { work: IWork }) => {
         if (alrayHave) {
             const newWorks = works.filter(w => w.id !== work.id);
             setTodaysPlans(newWorks);
+            toast.error("Removed from plan");
         }
     }
     return (

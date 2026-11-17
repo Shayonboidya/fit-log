@@ -2,6 +2,7 @@ import { IWork } from '@/app/Type';
 import { WorksContext } from '@/Context/WorksProvider';
 import React, { useContext } from 'react';
 import { FaXmark } from 'react-icons/fa6';
+import { toast } from 'react-toastify';
 
 const DeleteSaveCard = ({ work }: { work: IWork }) => {
     const { saved,setSaved } = useContext(WorksContext) as {
@@ -16,6 +17,7 @@ const DeleteSaveCard = ({ work }: { work: IWork }) => {
         if (alrayHave) {
             const newWorks = works.filter(w => w.id !== work.id);
             setSaved(newWorks);
+            toast.error("Removed from save");
         }
     }
     return (
